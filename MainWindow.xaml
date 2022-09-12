@@ -7,7 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Menu  Height="100">
+            <MenuItem Background="AliceBlue" Height="40" Width="100">文件</MenuItem>
+            <MenuItem Background="Orchid" Height="40" Width="100">文件</MenuItem>
+        </Menu>
         <!--<Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -20,16 +23,6 @@
         <Border Background="Red" Grid.Row="1"></Border>
         <Border Background="YellowGreen" Grid.Column="3"></Border>
         <Border Background="Blue" Grid.Row="1" Grid.Column="2"></Border>-->
-        <StackPanel>
 
-        </StackPanel>
-       
-       
-        <DockPanel LastChildFill="False">
-            <Button Width="100" Height="40"   DockPanel.Dock="Left">1</Button>
-            <Button Width="100" Height="40"   DockPanel.Dock="Top">2</Button>
-            <Button Width="100" Height="40"   DockPanel.Dock="Right">3</Button>
-            <Button Width="100" Height="40"   DockPanel.Dock="Bottom">4</Button>
-        </DockPanel>
     </Grid>
 </Window>

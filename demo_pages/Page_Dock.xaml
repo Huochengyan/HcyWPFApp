@@ -12,7 +12,7 @@
         <!-- DockPanel可以把元素固定到某个位置-->
         <DockPanel LastChildFill="False">
             <Button Width="100" Height="40"   DockPanel.Dock="Left">1</Button>
-            <Button Width="100" Height="40"   DockPanel.Dock="Top">2</Button>
+            <Button Width="122" Height="40"   DockPanel.Dock="Top">2</Button>
             <Button Width="100" Height="40"   DockPanel.Dock="Right">3</Button>
             <Button Width="100" Height="40"   DockPanel.Dock="Bottom">4</Button>
         </DockPanel>
