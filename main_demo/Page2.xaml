@@ -19,6 +19,9 @@
                 <Button Background="White">乐库</Button>
                 <Button Background="White">歌单</Button>
                 <Button Background="White">电台</Button>
+                <ListView>
+                    <ListViewItem >最近播放</ListViewItem>
+                </ListView>
             </StackPanel>
         </Grid>
         <!--<Border Background="AliceBlue" Grid.Column="0"></Border>-->

@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HcyWpfApp.Views
@@ -18,11 +17,18 @@ namespace HcyWpfApp.Views
     /// <summary>
     /// Login.xaml 的交互逻辑
     /// </summary>
-    public partial class Login : Page
+    public partial class Login : Window
     {
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void Click_login(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
     }
 }

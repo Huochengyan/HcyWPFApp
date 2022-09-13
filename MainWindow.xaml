@@ -1,16 +1,46 @@
-﻿<Window x:Class="HcyWpfApp.MainWindow"
+﻿<Window xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  x:Class="HcyWpfApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HcyWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Menu  Height="100">
-            <MenuItem Background="AliceBlue" Height="40" Width="100">文件</MenuItem>
-            <MenuItem Background="Orchid" Height="40" Width="100">文件</MenuItem>
-        </Menu>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40">
+
+            </RowDefinition>
+            <RowDefinition>
+               
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="241*"/>
+                <ColumnDefinition Width="559*"/>
+            </Grid.ColumnDefinitions>
+            <Menu Height="40" Grid.ColumnSpan="2">
+                <MenuItem  Height="40" Width="100" Header="文件">
+                    <MenuItem Header="打开资源目录"></MenuItem>
+                    <MenuItem Header="安装文件"></MenuItem>
+                </MenuItem>
+                <MenuItem  Height="40" Width="100" Header="工具">
+                    <MenuItem Header="工具1" Click="MenuItem_Tools_Click">
+                       
+                    </MenuItem>
+                    <MenuItem Header="工具2" Click="MenuItem_Tools_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem  Height="40" Width="100" Header="帮助"></MenuItem>
+            </Menu>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TabControl  Name="tableControl_main">
+                <TabItem Header="主页">
+                
+                </TabItem>
+            </TabControl>
+        </Grid>
         <!--<Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
