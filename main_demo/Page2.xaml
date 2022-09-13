@@ -9,6 +9,20 @@
       Title="Page2">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <StackPanel>
+                <Button Background="White">为你推荐</Button>
+                <Button Background="White">乐库</Button>
+                <Button Background="White">歌单</Button>
+                <Button Background="White">电台</Button>
+            </StackPanel>
+        </Grid>
+        <!--<Border Background="AliceBlue" Grid.Column="0"></Border>-->
+        <Border Background="AntiqueWhite"  Grid.Column="1"></Border>
         
     </Grid>
 </Page>
