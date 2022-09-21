@@ -1,0 +1,59 @@
+﻿<Window x:Class="HcyWpfApp.Views.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:local="clr-namespace:HcyWpfApp.Views"
+        mc:Ignorable="d"
+        Title="演示1" Height="506" Width="774" Loaded="Window_Loaded" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <WrapPanel Margin="10">
+                <Label   Margin="5" >姓名:</Label>
+                <TextBox Margin="5"  Text="" Width="180" />
+                <Label   Margin="5" >电话:</Label>
+                <TextBox Margin="5"  Text="" Width="180" />
+                <Button  Margin="5"  Width="91" Height="28" >搜索</Button>
+            </WrapPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <DataGrid Name="datagrid_main" HorizontalAlignment="Stretch" Margin="0,0,0,0" Width="NaN"
+                      CurrentCellChanged="DataGrid_CurrentCellChanged" SelectedCellsChanged="datagrid_main_SelectedCellsChanged" CellEditEnding="datagrid_main_CellEditEnding"
+                  
+                     >
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn/>
+                    <DataGridTemplateColumn x:Name="editColumn" Header="编辑">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Button Background="RoyalBlue">删除</Button>
+                                    <Button Background="Green">修改</Button>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+   
+                </DataGrid.Columns>
+                
+            </DataGrid>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <WrapPanel>
+
+                <Button Margin="3" Width="100" Background="CadetBlue">获取选中行</Button>
+                <Button Margin="3" Width="100" Background="CadetBlue">反选</Button>
+                
+                <Button Margin="3" Width="100">上一页</Button>
+                <Button Margin="3" Width="100">下一页</Button>
+
+            </WrapPanel>
+        </Grid>
+    </Grid>
+</Window>
